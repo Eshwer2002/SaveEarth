@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+:root {
+  --green: #27ae60;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+::selection {
+  background: var(--green);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 0.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 25px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+  font-size: 3.5rem;
+  color: #666;
+  font-weight: bolder;
+  border-left: 0.5rem solid var(--green);
+  padding-left: 1rem;
+}
+
+.header .logo span {
+  color: var(--green);
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  margin-left: 1rem;
+  color: #666;
+}
+
+.header .navbar a:hover {
+  color: var(--green);
+  padding-bottom: 0.2rem;
+  border-bottom: 0.2rem solid var(--green);
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: #666;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+  padding: 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 7%;
+  padding-top: 7rem;
+}
+
+.home {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), transparent), url('images/home-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  width: 60rem;
+  padding: 4rem 0;
+  padding-bottom: 15rem;
+}
+
+.home .content h3 {
+  font-size: 6.5rem;
+  color: var(--green);
+  text-transform: capitalize;
+}
+
+.home .content p {
+  color: #aaa;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 0.2rem solid var(--green);
+  font-size: 1.8rem;
+  color: var(--green);
+  background: rgba(0, 255, 0, 0.1);
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  border-radius: 25px;
+  background-color: var(--green);
+  color: #fff;
+  font-weight: bold;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -10rem;
+}
+
+.icons-container .icons {
+  width: 35rem;
+  height: 27rem;
+  background: #fff;
+  margin: 1rem;
+  padding: 2rem 1rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.icons-container .icons:hover {
+  transform: translateY(-1rem);
+}
+
+.icons-container .icons h3 {
+  color: var(--green);
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.icons-container .icons p {
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #666;
+  text-decoration: underline;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.heading span {
+  color: var(--green);
+}
+
+.project .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project .container .box {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  width: 30rem;
+  height: 45rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: 1rem;
+}
+
+.project .container .box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.project .container .box .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 4rem;
+  color: #fff;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
+.project .container .box:hover .title {
+  bottom: -100%;
+}
+
+.project .container .box .info {
+  background-color: #fff;
+  color: #aaa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: auto;
+}
+
+.project .container .box:hover .info {
+  bottom: 2rem;
+}
+
+.project .container .box .info h3 {
+  color: var(--green);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.project .container .box .info p {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.project .container .box .info a {
+  color: #aaa;
+  font-size: 2rem;
+}
+
+.project .container .box .info a:hover {
+  color: var(--green);
+}
+
+.donate{
+  min-height: auto;
+  background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url('images/donate-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+.donate .container{
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.donate .container .box{
+  border: 0.2rem solid #fff;
+  width: 20rem;
+  height: 15rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.donate .container .box i{
+  font-size: 4rem;
+  color: var(--green);
+  margin-bottom: 1.5rem;
+}
+.donate .container .box h3{
+  font-size: 2rem;
+  color: #fff;
+}
+.donate .container .box span{
+  font-size: 2rem;
+  color: #aaa;
+}
+.donate .donation-box{
+  flex:1 1 40rem;
+  padding: 2rem;'
+  margin: 1rem;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+}
+.donate .donation-box h3{
+  font-size: 4rem;
+  color: var(--green);
+  text-decoration: underline;
+}
+.donate .donation-box .amount{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  margin: 1rem;
+}
+.donate .donation-box .amount input{
+  height: 5rem;
+  width: 10rem;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  margin: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.donate .donation-box .amount input:hover,
+.donate .donation-box .amount input.active{
+  background: var(--green);
+}
+
+.team .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team .container .box{
+  border: 0.1rem solid black;
+  margin: 1rem;
+    text-align: center;
+}
+.team .container .box img{
+  width: 30rem;
+  height: 40rem;
+  padding: 1rem;
+}
+.team .container .box h3{
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.team .container .box .icons i{
+  font-size: 2rem;
+  margin: 1rem;
+  background: #aaa;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+.team .container .box .icons i:hover{
+  background: var(--green);
+}
+
+.testimonials .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+.testimonials .container .box{
+  text-align: center;
+  width: 30rem;
+  margin: 1rem;
+}
+.testimonials .container .box .comment{
+  border: 0.2rem solid var(--green);
+  font-size: 1.5rem;
+  color: #aaa;
+  height: 24rem;
+  padding: 0 0.5rem;
+}
+.testimonials .container .box .comment i{
+  color:var(--green);
+  font-size: 3rem;
+  margin: 1rem;
+}
+.testimonials .container .box i{
+  color: var(--green);
+  font-size: 6rem;
+  margin-top: -2.4rem;
+}
+.testimonials .container .box img{
+  width: 10rem;
+  border-radius: 50%;
+}
+.testimonials .container .box .stars i{
+  font-size: 1rem;
+}
+.join .container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+.join .container .image{
+  flex: 1 1 40rem;
+}
+.join .container .image img{
+  width: 100%;
+}
+.join .container form{
+  flex: 1 1 40rem;
+  margin-left: 2rem;
+  background: black;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+.join .container form span{
+  font-size: 2rem;
+  color: var(--green);
+  text-transform: capitalize;
+}
+.join .container form .box{
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  background-color:white;
+  padding: 1rem;
+  color: black;
+}
+.join .container form .message{
+  width: 100%;
+  height: 10rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: white;
+  color:black;
+}
+.footer{
+  padding-top: 2rem;
+  margin-top: 5rem;
+  background: url('images/footer-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+.footer .container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer .container .box{
+  width: 34rem;
+  height: 30rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.footer .container .box h3{
+  font-size: 2.5rem;
+  color: var(--green);
+  padding: 1rem 0;
+  text-decoration: underline;
+}
+.footer .container .box p{
+  font-size: 2rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.footer .container .box p i{
+  margin-right: 1rem;
+}
+.footer .container .box a{
+  display: block;
+  font-size: 2rem;
+  color: #666;
+  padding-top: 1rem;
+  width: 10rem;
+}
+.footer .container .box a:hover{
+  color: var(--green);
+}
+.footer .container .follow-box i{
+  font-size: 2.7rem;
+  margin: 1rem;
+  background: #aaa;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer .container .follow-box i:hover{
+  background-color: var(--green);
+}
+.credit{
+  text-align: center;
+  margin: 2rem;
+}
+.credit h1{
+  font-size: 3rem;
+  color: #666;
+}
+.credit h1 span{
+  color: var(--green);
+}
+.credit p{
+  font-size: 2rem;
+  padding: 1rem;
+  color: #999;
+}
+.footer .above{
+  width: 60%;
+  height: 0.2rem;
+  background: #999;
+  margin: 0 auto;
+}
+.footer .below{
+  width: 100%;
+  height: 1rem;
+  background: var(--green);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width:840px) {
+  html {
+    font-size: 55%;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: none;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  .header .navbar.active {
+    display: inline-block;
+  }
+
+  .header .navbar a {
+    display: block;
+    margin-top: 2rem;
+    border-bottom: none;
+    font-size: 2.5rem;
+    padding: 0 1rem;
+    border-left: 0.2rem solid var(--green);
+  }
+
+  .header .navbar a:hover {
+    border-bottom: none;
+  }
+
+  .home {
+    background-position: right;
+  }
+
+  .home .content {
+    text-align: center;
+    width: auto;
+  }
+}
